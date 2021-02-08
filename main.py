@@ -26,4 +26,5 @@ api.add_namespace(boardgames_api_namespace)
 if __name__ == '__main__':
     logging.basicConfig(filename=config.log_path, level=logging.DEBUG)
     logging.info("Start boardgame collection service...")
+    print("Started on http://localhost:{0}".format(config.port))
     app.run(debug=config.debug, port=config.port)
